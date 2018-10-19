@@ -1,0 +1,53 @@
+{% import "partials/_mixins.html" as mixins %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#fff"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/app.css"/>
+    {# {% include "../partials/_media-tags.html" %} #}
+  </head>
+  <body>
+
+    <!-- BEGIN content -->
+      {% block content %}{% endblock %}
+    <!-- END content -->
+
+    <!-- BEGIN scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9pumcofHA1XO-13Dz9bM_Y9kVfJfTKdc"></script>
+    <script src="js/app.js"></script>
+    <script>
+      function initMap() {
+         var uluru = {lat: 55.7949248, lng: 37.7876483}
+         var map = new google.maps.Map(document.getElementById('map'), {
+          center: uluru,
+          zoom: 11.75,
+          zoomControl: true,
+          zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_CENTER
+          },
+          mapTypeControl: false,
+          streetViewControl: false,
+          fullscreenControl: false,
+          styles:
+            [{"featureType":"all","stylers":[{"saturation":0},{"hue":"#e7ecf0"}]},{"featureType":"road","stylers":[{"saturation":-70}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"simplified"},{"saturation":-60}]}]
+        });
+        var image = {
+          url: '/img/marker.svg',
+          size: new google.maps.Size(30, 30),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(0, 0),
+          scaledSize: new google.maps.Size(30, 30)
+        };
+        var marker = new google.maps.Marker({position: uluru, map: map, icon: image});
+      }
+      initMap();
+    </script>
+    <!-- END scripts -->
+  </body>
+</html>

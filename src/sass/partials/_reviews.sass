@@ -1,0 +1,214 @@
+.reviews
+	padding-bottom: 80px
+	+r(768)
+		padding: 50px 0
+	&__wrapper
+		padding-top: 60px
+		padding-bottom: 35px
+		border-top: 1px solid $mercury
+		border-bottom: 1px solid $mercury
+		&_voting
+			display: flex
+			justify-content: center
+			padding-top: 25px
+			align-items: center
+			+r(1200)
+			padding-top: 30px
+			+r(768)
+				flex-direction: column
+				justify-content: center
+			p
+				margin-right: 30px
+				font-size: 20px
+				font-weight: 600
+				color: $mine-shaft
+			.info-line__button_reviews
+				span
+					padding: 15px 45px
+					font-weight: 600
+				+r(768)
+					display: block
+			fieldset, label
+				margin: 0
+				padding: 0
+			fieldset
+				margin-right: 30px
+			.rating
+				border: none
+				float: left
+			.rating > input
+				display: none
+			.rating > label:before
+				margin: 5px
+				font-size: 32px
+				font-family: FontAwesome, sans-serif
+				display: inline-block
+				content: "\f005"
+			.rating > .half:before
+				content: "\f089"
+				position: absolute
+			.rating > label
+				color: #ddd
+				float: right
+			.rating > input:checked ~ label,
+			.rating:not(:checked) > label:hover,
+			.rating:not(:checked) > label:hover ~ label
+				color: #eb6e00
+			.rating > input:checked + label:hover,
+			.rating > input:checked ~ label:hover,
+			.rating > label:hover ~ input:checked ~ label,
+			.rating > input:checked ~ label:hover ~ label
+				color: #ed6400
+		&_diagram
+			display: flex
+
+	&__diagram
+		max-width: 215px
+		margin-right: 65px
+		+r(567)
+			margin-right: 0
+		progress[value]
+			margin-left: 20px
+			appearance: none
+			width: 165px
+			+r(576)
+				width: 130px
+			height: 20px
+			background-color: transparent
+			position: relative
+			&:before
+				content: url("../img/star.svg")
+				position: absolute
+				width: 18px
+				height: 18px
+				left: -23px
+				top: 50%
+				transform: translateY(-50%)
+		progress[value]::-webkit-progress-bar
+			background-color: $white
+			border-radius: 4px
+		progress[value]::-webkit-progress-value
+			background-color: $chetwode-blue
+			border-radius: 0 3px 3px 0
+			background-size: 35px 20px, 100% 100%, 100% 100%
+		p
+			margin-bottom: 4px
+	&__rating
+		text-align: center
+		width: 100px
+		strong
+			font-size: 60px
+			font-weight: 400
+			color: $chetwode-blue
+			display: inline-block
+			margin-bottom: 10px
+		p
+			font-size: 14px
+			text-decoration: underline
+			font-weight: 300
+			color: #adadad
+		fieldset, label
+			margin: 0 auto 2px
+			padding: 0
+		.rating_diagram
+			border: none
+			float: left
+		.rating_diagram > input
+			display: none
+		.rating_diagram > label:before
+			margin: 2px
+			font-size: 16px
+			font-family: FontAwesome, sans-serif
+			display: inline-block
+			content: "\f005"
+		.rating_diagram > .half:before
+			content: "\f089"
+			position: absolute
+		.rating_diagram > label
+			color: #ddd
+			float: right
+		.rating_diagram > input:checked ~ label,
+		.rating_diagram:not(:checked) > label:hover,
+		.rating_diagram:not(:checked) > label:hover ~ label
+			color: #eb6e00
+		.rating_diagram > input:checked + label:hover,
+		.rating_diagram > input:checked ~ label:hover,
+		.rating_diagram > label:hover ~ input:checked ~ label,
+		.rating_diagram > input:checked ~ label:hover ~ label
+			color: #ed6400
+	.swiper-container
+		max-width: 725px
+		min-height: 225px
+		+r(1200)
+			margin-bottom: 30px
+	.swiper-pagination
+		position: absolute
+		bottom: 0
+		.swiper-pagination-bullet
+			height: 1px
+			width: 20px
+			background: #979795
+			opacity: 1
+			border-radius: 0
+		.swiper-pagination-bullet-active
+			height: 3px
+			background: #747bdb
+			opacity: 1
+			border-radius: 0
+	.swiper-slide
+		padding-bottom: 30px
+		&__title
+			display: flex
+			margin-bottom: 25px
+			align-items: center
+			img
+				border-radius: 5px
+				margin-right: 30px
+			h4
+				max-width: 200px
+				font-size: 18px
+				color: $mine-shaft
+				font-weight: 600
+				+text-overflow
+			fieldset, label
+				margin: 0
+				padding: 0
+			fieldset
+				margin-right: 10px
+			.rating_client
+				border: none
+				float: left
+			.rating_client > input
+				display: none
+			.rating_client > label:before
+				margin: 1px
+				font-size: 14px
+				font-family: FontAwesome, sans-serif
+				display: inline-block
+				content: "\f005"
+			.rating_client > .half:before
+				content: "\f089"
+				position: absolute
+			.rating_client > label
+				color: #ddd
+				float: right
+			.rating_client > input:checked ~ label,
+			.rating_client:not(:checked) > label:hover,
+			.rating_client:not(:checked) > label:hover ~ label
+				color: #eb6e00
+			.rating_client > input:checked + label:hover,
+			.rating_client > input:checked ~ label:hover,
+			.rating_client > label:hover ~ input:checked ~ label,
+			.rating_client > input:checked ~ label:hover ~ label
+				color: #ed6400
+			data
+				font-size: 14px
+				font-weight: 300
+				color: #adadad
+		p
+			font-size: 14px
+			font-weight: 300
+			color: $gray
+			line-height: 1.75em
+
+

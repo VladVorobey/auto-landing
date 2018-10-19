@@ -1,0 +1,76 @@
+.header
+	padding-top: 73px
+	padding-bottom: 80px
+	background: #fafafa url("../img/header-bg.png") no-repeat right 0
+	min-height: 500px
+	+r(1920)
+		background-position: 720px 0
+	+r(1200)
+		background-position-x: 500px
+	+r(992)
+		background-position: 300px 0
+	+r(768)
+		padding-top: 50px
+		padding-bottom: 50px
+		min-height: auto
+	+r(576)
+		background-position-x: 50px
+	&__title
+		max-width: 700px
+		max-height: 120px
+		overflow: hidden
+		text-overflow: ellipsis
+		margin-bottom: 40px
+		+r(992)
+			margin-bottom: 35px
+		+r(768)
+			margin-bottom: 30px
+		h1
+			font-size: 46px
+			font-weight: 600
+			color: $mine-shaft
+			line-height: 1.2
+			+r(992)
+				font-size: 36px
+			+r(768)
+				font-size: 30px
+			+r(576)
+				font-size: 26px
+	&__sub-title
+		padding-left: 30px
+		max-height: 75px
+		max-width: 540px
+		position: relative
+		margin-bottom: 60px
+		overflow: hidden
+		text-overflow: ellipsis
+		+r(992)
+			max-width: 370px
+			max-height: 115px
+		+r(768)
+			margin-bottom: 130px
+		+r(576)
+			padding-left: 10px
+			margin-bottom: 30px
+		&::before
+			content: ''
+			width: 1px
+			height: 100%
+			position: absolute
+			left: 0
+			background-image: linear-gradient( to top, rgb(52,204,231) 0%, rgb(116,123,219) 100%)
+		p
+			font-size: 20px
+			line-height: 1.8em
+			font-weight: 300
+			color: $mine-shaft
+			+r(992)
+				font-size: 18px
+				font-weight: 400
+				br
+					display: none
+			+r(768)
+				font-size: 16px
+			+r(576)
+				font-size: 14px
+

@@ -1,0 +1,101 @@
+.save-screen
+	padding-top: 87px
+	padding-bottom:  20px
+	background: url("../img/tel-bg.png") bottom center no-repeat
+	+r(768)
+		padding: 50px 0
+	+r(576)
+		padding: 50px 0 0
+	&__content
+		+r(1200)
+			margin-bottom: 30px
+		p
+			margin-bottom:  15px
+			+r(576)
+				text-align: center
+			a
+				font-weight: 700
+				font-size: 36px
+				color: $mine-shaft
+				+r(992)
+					font-size: 32px
+				+r(768)
+					font-size: 28px
+				+r(576)
+					font-size: 24px
+
+	&__button
+		+r(576)
+			text-align: center
+		a
+			font-size: 11px
+			font-weight: 600
+			background: $white
+			border-radius: 5px
+			box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.15)
+			text-transform: uppercase
+			padding: 17px 57px 13px 25px
+			margin-right: 15px
+			display: inline-block
+			position: relative
+			letter-spacing: 0.05em
+			+r(576)
+				margin-bottom: 15px
+			.icon
+				font-size: 18px
+				position: absolute
+				right: 25px
+				top: 50%
+				transform: translateY(-50%)
+			&:hover
+				transform: translateY(2px)
+				box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.35)
+		.viber
+			color: #665ca7
+			.icon
+				fill: #665ca7
+		.whatsapp
+			color: #00e676
+			.icon
+				fill: #00e676
+	&__tell-save
+		margin-top: 45px
+		width: 235px
+		height: 450px
+		background: $white url("../img/tell-save.png") no-repeat
+		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15)
+		font-family: $san-francisco
+		&_name
+			padding-top: 37px
+			padding-left: 55px
+			margin-bottom: 26px
+			p
+				font-weight: 400
+				font-size: 11px
+				margin-bottom: 15px
+				max-width: 170px
+				max-height: 15px
+				+text-overflow
+		&_num
+			padding-left: 90px
+			font-weight: 600
+			margin-bottom: 73px
+			a
+				font-size: 12px
+				+text-overflow
+				max-width: 98px
+				max-height: 14px
+				color: $mine-shaft
+				&:hover
+					text-decoration: underline
+		&_mail
+			padding-left: 105px
+			font-size: 11px
+			margin-bottom: 85px
+			a
+				+text-overflow
+				max-width: 110px
+				max-height: 12px
+				color: #729de6
+				&:hover
+					text-decoration: underline

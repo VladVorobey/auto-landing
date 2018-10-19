@@ -1,0 +1,5 @@
+ProjectTitle: landing-auto
+
+PageList:
+- file: index.html
+  ready: 50
