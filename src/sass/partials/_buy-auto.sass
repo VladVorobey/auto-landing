@@ -36,25 +36,20 @@
 			&::before
 				content: ''
 				position: absolute
-				transform: scale(0) translateX(-15px)
+				transform: scale(0)
 				transition: all .3s
 				bottom: 0
 				width: 100%
 				height: 2px
+				left: 0
 				background-image: $gradient
-				+r(576)
-					transform: scale(0) translateX(0)
 			&:hover, &:focus
 				&::before
-					transform: scale(1) translateX(-15px)
-					+r(576)
-						transform: scale(1) translateX(0)
+					transform: scale(1)
 			&.active
 				color: #000
 				&::before
-					transform: scale(1) translateX(-15px)
-					+r(576)
-						transform: scale(1) translateX(0)
+					transform: scale(1)
 		&_content
 			padding: 0 70px
 			+r(992)

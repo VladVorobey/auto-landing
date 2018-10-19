@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
 import slick from 'slick-carousel';
+import '../../node_modules/jquery-popup-overlay/jquery.popupoverlay';
+import '../../node_modules/jquery-validation/dist/jquery.validate.min';
 
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 2,
@@ -48,7 +50,7 @@ $(document).ready(function() {
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
 
-    if( target.length ) {
+    if (target.length) {
       event.preventDefault();
       $('html, body').stop().animate({
         scrollTop: target.offset().top
@@ -115,5 +117,48 @@ $(document).ready(function() {
     $(this).next().slideToggle();
     $('.faq__toggle').not($(this).next()).slideUp();
   });
-
+  $('.modal').popup({
+    transition: 'all 0.3s',
+    outline: true, // optional
+    focusdelay: 400, // optional
+    vertical: 'top', //optional
+    // onclose: function() {
+    //   $(this).find('label.error').remove();
+    // }
+  });
+  //---- FORM ----
+  // $('.form').each(function(index, el) {
+  //   $(el).addClass('form-' + index);
+  //
+  //   $('.form-' + index).validate({
+  //     rules: {
+  //       name: 'required',
+  //       email: 'required',
+  //       textarea: 'required'
+  //     },
+  //     messages: {
+  //       name: 'Введите Ваше имя',
+  //       email: 'Введите Ваш email',
+  //       textarea: 'Задайте Ваш вопрос'
+  //     },
+  //     submitHandler: function(form) {
+  //       var t = $('.form-' + index).serialize();
+  //       ajaxSend('.form-' + index, t);
+  //     }
+  //   });
+  //  });
+  // function ajaxSend(formName, data) {
+  //   jQuery.ajax({
+  //     type: 'POST',
+  //     url: '/wp-content/themes/hostels/sendmail.php',
+  //     data: data,
+  //     success: function() {
+  //       $('.modal').popup('hide');
+  //       $('#thanks').popup('show');
+  //       setTimeout(function() {
+  //         $(formName).trigger('reset');
+  //       }, 2000);
+  //     }
+  //   });
+  // };
 });

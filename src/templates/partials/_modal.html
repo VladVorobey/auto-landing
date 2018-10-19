@@ -1,0 +1,32 @@
+<div id="modal" class="modal">
+    <div class="modal_close">
+      x
+    </div>
+    <div class="modal__content">
+      <form action="sendmail.php" method="get" class="form">
+        <div class="form__wrapper">
+          <label>
+            Введите Ваше имя
+            <input type="text" name="name" placeholder="Ваше имя" required>
+          </label>
+          <label>
+            Введите Ваш e-mail
+            <input type="email" name="email" placeholder="Ваш e-mail" required>
+          </label>
+        </div>
+        <label>
+          Задайте Ваш вопрос
+          <textarea name="textarea" placeholder="Напишите свой вопрос нам, наш специалист ответит на него и обязательно с вами свяжется." rows="3" required></textarea>
+        </label>
+        <button type="submit" class="button" name="submit">Задать вопрос</button>
+      </form>
+    </div>
+</div>
+
+<div id="thanks" class="modal">
+  <div class="thanks_close modal_close">x</div>
+  <div class="modal__thanks">
+    <h3>Спасибо за заказ</h3>
+    <p>Скоро мы Вам перезвоним!</p>
+  </div>
+</div>

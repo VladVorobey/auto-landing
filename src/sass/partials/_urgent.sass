@@ -58,6 +58,7 @@
 				max-width: 425px
 				+r(992)
 					max-width: none
+					margin-bottom: 30px
 				h3
 					font-size: 16px
 					font-weight: 700
@@ -116,6 +117,9 @@
 							height: 30px
 							left: 2px
 							top: 6px
+							+r(992)
+								top: 50%
+								transform: translateY(-50%)
 
 $slick-prev-character: "<" !default
 $slick-next-character: ">" !default
@@ -154,7 +158,10 @@ $slick-dot-character: "•" !default
 	background: $white
 	padding: 4px 10px 8px
 	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1)
-
+	+r(992)
+		left: 0
+	+r(576)
+		left: -10px
 	&:before
 		content: url("../img/arrow-left.svg")
 		width: 8px
@@ -167,7 +174,10 @@ $slick-dot-character: "•" !default
 	background: $white
 	padding: 4px 10px 8px
 	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1)
-
+	+r(992)
+		right: 0
+	+r(576)
+		right: -10px
 	&:before
 		content: url("../img/arrow-right.svg")
 		width: 8px

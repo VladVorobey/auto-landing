@@ -1,0 +1,186 @@
+.modal
+	margin: 5% auto 0
+	width: 950px
+	background-color: $white
+	padding: 20px
+	+r(992)
+		width: 90%
+	+r(576)
+		width: 100%
+		margin: 0
+	&_close
+		display: inline-block
+		cursor: pointer
+		position: relative
+		top: -5px
+		right: 20px
+		left: 97%
+		&:hover
+			color: red
+	&__content
+		max-width: 1170px
+		margin: 0 auto
+		position: relative
+		label
+			font-size: 16px
+			font-weight: 600
+			color: $mine-shaft
+			padding-top: 25px
+
+			+r(576)
+				text-align: center
+	.form
+		display: flex
+		flex-direction: column
+		&__wrapper
+			display: flex
+			border-bottom: 1px solid #e0e0e0
+			+r(992)
+				align-items: center
+				justify-content: center
+			+r(576)
+				flex-direction: column
+			input[type="text"]
+				margin-right: 125px
+				+r(992)
+					margin-right: 40px
+				+r(576)
+					margin-bottom: 0
+					margin-right: 0
+		label
+			+r(576)
+				text-align: center
+		input
+			border: 1px solid #e0e0e0
+			background: transparent
+			border-radius: 5px
+			line-height: 1
+			font-size: 14px
+			font-weight: 400
+			padding: 15px
+			color: $gray
+			outline: none
+			box-shadow: none
+			-webkit-appearance: none
+			-moz-appearance: none
+			margin-bottom: 30px
+			min-width: 330px
+			margin-top: 25px
+			+r(992)
+				min-width: 250px
+			+r(576)
+				width: 100%
+			&:focus:required:invalid
+				border-color: red
+				color: $gray
+				font-size: 14px
+				font-weight: 400
+				outline: none
+				box-shadow: none
+				-webkit-appearance: none
+			&:required:valid
+				border-color: $chetwode-blue
+				color: $gray
+				font-size: 14px
+				font-weight: 400
+				outline: none
+				box-shadow: none
+				-webkit-appearance: none
+			&::placeholder
+				color: $gray
+				font-size: 14px
+				font-weight: 400
+		textarea
+			border: 1px solid #e0e0e0
+			background: transparent
+			border-radius: 5px
+			line-height: 1
+			font-size: 14px
+			font-weight: 400
+			padding: 15px
+			color: $gray
+			outline: none
+			box-shadow: none
+			-webkit-appearance: none
+			-moz-appearance: none
+			width: 100%
+			margin-bottom: 30px
+			margin-top: 25px
+			&:focus:required:invalid
+				border-color: red
+				color: $gray
+				font-size: 14px
+				font-weight: 400
+				outline: none
+				box-shadow: none
+				-webkit-appearance: none
+			&:required:valid
+				border-color: $chetwode-blue
+				color: $gray
+				font-size: 14px
+				font-weight: 400
+				outline: none
+				box-shadow: none
+				-webkit-appearance: none
+			&::placeholder
+				color: $gray
+				font-size: 14px
+				font-weight: 400
+		label.error
+			background: red
+			padding: 5px 10px
+			color: $white
+			border-radius: 15px
+			width: 300px
+			position: absolute
+			transform: translateY(-10px) translateX(10px)
+		.button
+			display: inline-block
+			z-index: 1
+			position: relative
+			font-size: 14px
+			text-transform: uppercase
+			font-weight: 700
+			color: $white
+			background-image: linear-gradient( to right, rgb(116,116,219) 0%, rgb(57,219,247) 100%)
+			line-height: 1
+			padding: 20px 58px 20px 35px
+			border-radius: 5px
+			transition: all .5s
+			box-shadow:  rgba(116,116,219,0.3) -10px 10px 40px 3px,  rgba(57,219,247,0.3) 10px 10px 40px 3px
+			+text-overflow
+			max-width: none
+			max-height: 60px
+			&::after
+				content: ''
+				width: 8px
+				height: 8px
+				position: absolute
+				top: 50%
+				transform: translateX(5px) translateY(-50%) rotate(-45deg)
+				border-bottom: 2px solid $white
+				border-right: 2px solid $white
+				transition: all .5s
+			&:hover, &:focus
+				transform: translateY(2px)
+				transition: all .5s
+				box-shadow:  rgba(116,116,219,0.5) -10px 10px 40px 3px,  rgba(57,219,247,0.5) 10px 10px 40px 3px
+				&::after
+					transition: all .5s
+					transform: translateX(10px) translateY(-50%) rotate(-45deg)
+			&:active
+				transform: translateY(1px)
+				box-shadow:  rgba(116,116,219,0.4) -10px 10px 40px 3px,  rgba(57,219,247,0.4) 10px 10px 40px 3px
+				&:after
+					right: 35px
+	&__thanks
+		text-align: center
+		padding-top: 120px
+		padding-bottom: 80px
+		+r(768)
+			padding-top: 50px
+			padding-bottom: 50px
+		h3
+			max-width: none
+		p
+			max-width: none
